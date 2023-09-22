@@ -12,6 +12,7 @@ public class Bank23 {
         lama_menabung= input23.nextInt();
         bunga= lama_menabung*prosentase_bunga*jml_tabungan_awal;
         jml_tabungan_akhir=bunga+jml_tabungan_awal;
+        input23.close();
         System.out.println("Bunga adalah " +bunga);
         System.out.println("Jumlah tabungan akhir anda adalah " +jml_tabungan_akhir);
     }

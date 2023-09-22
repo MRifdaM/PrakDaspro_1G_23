@@ -11,6 +11,7 @@ public class Segitiga23 {
         System.out.println("Masukkan tinggi: ");
         tinggi = sc23.nextInt();
         luas = alas * tinggi / 2;
+        sc23.close();
         System.out.println("Luas segitiga: " + luas);
     }
 }
