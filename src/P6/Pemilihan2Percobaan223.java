@@ -17,8 +17,12 @@ public class Pemilihan2Percobaan223 {
         if (totalSudut == 180){
             if (sudut1==90 || sudut2==90 || sudut3==90) {
                 System.out.println("Segitiga Tersebut Adalah Segitiga Siku-Siku");
+            } else if (sudut1==60 && sudut2==60 && sudut3==60) {
+                System.out.println("Segitiga Tersebut Adalah Segitiga Sama Sisi");
+            } else if ((sudut1==70 && sudut2==70 && sudut3==40) || (sudut1==40 && sudut2==70 && sudut3==70) || (sudut1==70 && sudut2==40 && sudut3==70)){
+                System.out.println("Segitiga Tersebut Adalah Segitiga Sama Kaki");
             } else {
-                System.out.println("Segitiga Tersebut Bukan Segitiga Siku-Siku");
+                System.out.println("Segitiga Tersebut Adalah Segitiga Sembarang");
             }
         } else {
             System.out.println("Bukan Segitiga");
