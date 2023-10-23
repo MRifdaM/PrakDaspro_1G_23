@@ -70,6 +70,7 @@ public class menghitungGajiPegawaiTokoSepeda23 {
                     System.out.println("Kembali ke menu? (y/t) :");
                     pilih223 = Rifda.next();
                 } else {
+                    jmlPenjualanSepeda23 *= 1500000;
                     if (jmlPenjualanSepeda23 == 3000000){
                         komisi23 = jmlPenjualanSepeda23 * 0.02;
                     } else if (jmlPenjualanSepeda23 >= 3000000 && jmlPenjualanSepeda23 <= 5000000) {
