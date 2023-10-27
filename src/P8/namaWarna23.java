@@ -1,4 +1,4 @@
-package P6;
+package P8;
 import java.util.Scanner;
 
 public class namaWarna23 {
