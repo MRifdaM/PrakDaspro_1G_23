@@ -56,12 +56,14 @@ public class menghitungGajiPegawaiTokoSepeda23 {
                 System.out.println("Lama Cuti :" + jmlCuti23);
                 System.out.print("Kembali ke menu? (y/t) :");
                 pilih223 = Rifda.next();
-                if (pilih223.equals("y")) {
+                if (pilih223.equalsIgnoreCase("y")) {
                     break;
-                }
                 } else {
-                    break;
+                    isBreak23=false;
                 }
+            } else {
+                break;
+            }
                 break;
 
                 case 2:
@@ -69,6 +71,12 @@ public class menghitungGajiPegawaiTokoSepeda23 {
                     System.out.println("Masukkan data karyawan terlebih dahulu");
                     System.out.println("Kembali ke menu? (y/t) :");
                     pilih223 = Rifda.next();
+                    if (pilih223.equalsIgnoreCase("y")) {
+                        break;
+                    } else {
+                        isBreak23 = false;
+                        
+                    }
                 } else {
                     jmlPenjualanSepeda23 *= 1500000;
                     if (jmlPenjualanSepeda23 == 3000000){
@@ -101,6 +109,11 @@ public class menghitungGajiPegawaiTokoSepeda23 {
                 System.out.println("Gaji yang diterima :" + gaji23);
                 System.out.println("Kembali ke menu? (y/t)");
                 pilih223 = Rifda.next();
+                if (pilih223.equalsIgnoreCase("y")){
+                    break;
+                } else {
+                    isBreak23=false;
+                }
                 }
             }
         }
