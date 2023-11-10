@@ -1,7 +1,5 @@
 package P10;
-
 import java.util.Scanner;
-
 public class BioskopWithScanner23 {
     public static void main(String[] args) {
         Scanner sc23 = new Scanner(System.in);
@@ -9,17 +7,15 @@ public class BioskopWithScanner23 {
         String nama, next, pilih2;
         boolean menu = true;
         String penonton[][] = new String[4][2];
-
         while (menu) {
             System.out.println("MENU 1: INPUT DATA PENONTON");
             System.out.println("MENU 2:TAMPILKAN DAFTAR PENONTON");
             System.out.println("MENU 3: EXIT");
             System.out.print("Masukkan menu : ");
             pilih = sc23.nextInt();
-
             switch (pilih) {
                 case 1:
-                while(true) {
+                do {
                     System.out.println("==INPUT DATA PENONTON==");
                     System.out.print("Masukkan nama: ");
                     nama = sc23.next();
@@ -34,24 +30,20 @@ public class BioskopWithScanner23 {
                     penonton[baris-1][kolom-1] = nama;
                     } else {
                         System.out.println("Kursi sudah terisi");
+                        continue;
                     }
                     System.out.print("Input penonton lainnya? (y/n): ");
                     next = sc23.next();
+                    
                     if (next.equalsIgnoreCase("n")) {
                         break;
                     }
-                }
+                } while (penonton[baris-1][kolom-1] != null);
                     break;
                 case 2:
                     System.out.println("==TAMPILKAN DAFTAR PENONTON==");
                     for (int i = 0; i < penonton.length; i++) {
-                        for(int j = 0; j < penonton[i].length; j++){
-                            if(penonton[i][j] == null) {
-                                System.out.print(" *** ");
-                            } else {
-                                System.out.println(" " + penonton[i][j]);
-                            }
-                        }System.out.println();
+                        System.out.println("Penonton pada baris ke-" + (i + 1) + ": " + String.join(", ", penonton[i]));
                     }
                     break;
                 case 3:
