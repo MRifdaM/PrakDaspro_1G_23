@@ -30,8 +30,10 @@ public class BioskopWithScanner23 {
                     sc23.nextLine();
                     if(baris > penonton.length || kolom > penonton[0].length) {
                         System.out.println("Kursi tidak tersedia");
-                    } else {
+                    } else if (penonton[baris-1][kolom-1] == null) {
                     penonton[baris-1][kolom-1] = nama;
+                    } else {
+                        System.out.println("Kursi sudah terisi");
                     }
                     System.out.print("Input penonton lainnya? (y/n): ");
                     next = sc23.next();
