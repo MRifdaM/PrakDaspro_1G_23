@@ -17,3 +17,4 @@ public class Square23 {
         sc23.close();
     }
 }
+
