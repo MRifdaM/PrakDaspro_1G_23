@@ -1,4 +1,5 @@
 package P11;
+
 import java.util.Scanner;
 
 public class Star23 {
@@ -9,7 +10,7 @@ public class Star23 {
         n = sc23.nextInt();
         for (long i = 1; i <= n; i--) {
             System.out.print("*");
+        }
+        sc23.close();
     }
-    sc23.close();
-}
 }
