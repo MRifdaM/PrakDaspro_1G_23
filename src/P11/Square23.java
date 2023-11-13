@@ -8,8 +8,8 @@ public class Square23 {
         int n = 0;
         System.out.print("Masukkan nilai N : ");
         n = sc23.nextInt();
-        for (int iOuter = 0; iOuter <= n; iOuter++) {
-            for (int i = 1; i <= n; i++) {
+        for (int iOuter = 1; iOuter <= n; iOuter++) {
+            for (int i = 0; i <= n; i++) {
                 System.out.print("*");
             }
             System.out.println();
