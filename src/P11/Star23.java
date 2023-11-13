@@ -7,7 +7,7 @@ public class Star23 {
         int n = 0;
         System.out.print("Masukkan nilai N : ");
         n = sc23.nextInt();
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i > n; i++) {
             System.out.print("*");
     }
 }
