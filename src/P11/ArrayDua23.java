@@ -8,6 +8,7 @@ public class ArrayDua23 {
         int data[][] = new int[4][4];
         int jam[] = { 3, 6, 9, 12 };
         int min[] = { 100, 100, 100, 100 };
+        int maxSuhu = data[0][0], maxKelembapan = data[0][1], maxKecepatan = data[0][2], maxIndeksUV = data[0][3];
         double total[] = { 0, 0, 0, 0 };
         double rata[] = { 0, 0, 0, 0 };
         for (int i = 0; i < data.length; i++) {
@@ -19,6 +20,9 @@ public class ArrayDua23 {
                         data[i][j] = scan23.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        }
+                        if (data[i][j] > data[i][j + 1]) {
+
                         }
                         total[j] += data[i][j];
                         break;
@@ -47,6 +51,19 @@ public class ArrayDua23 {
                         total[j] += data[i][j];
                         break;
                 }
+                
+                    if (maxSuhu < data[i][j]) {
+                        maxSuhu = data[i][j];
+                    }
+                    if (maxKelembapan < data[i][j]) {
+                        maxKelembapan = data[i][j];
+                    }
+                    if (maxKecepatan < data[i][j]) {
+                        maxKecepatan = data[i][j];
+                    }
+                    if (maxIndeksUV < data[i][j]) {
+                        maxIndeksUV = data[i][j];
+                    }
                 rata[j] = total[j] / data[0].length;
             }
         }
@@ -58,13 +75,8 @@ public class ArrayDua23 {
             System.out.println("");
         }
         System.out.println("---------------------");
-        for (int i = 0; i < data.length; i++) {
-            for (int j = 2; j < data[0].length-1; j++) {
-                System.out.println("Kecepatan angin jam " + jam[i] + " adalah "+ data[i][j]);
-        }
-    }
         System.out.printf("Rata-rata suhu: %.2f\n", rata[0]);
         System.out.printf("Persentase kelembaban terendah: %s\n", min[1]);
-        scan23.close();
+        scan23.close(); 
     }
 }
