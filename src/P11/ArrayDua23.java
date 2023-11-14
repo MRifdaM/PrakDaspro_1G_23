@@ -21,8 +21,8 @@ public class ArrayDua23 {
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
                         }
-                        if (data[i][j] > data[i][j + 1]) {
-
+                        if (maxSuhu < data[i][j]) {
+                        maxSuhu = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -32,6 +32,9 @@ public class ArrayDua23 {
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
                         }
+                        if (maxKelembapan < data[i][j]) {
+                        maxKelembapan = data[i][j];
+                        }
                         total[j] += data[i][j];
                         break;
                     case 2:
@@ -39,6 +42,9 @@ public class ArrayDua23 {
                         data[i][j] = scan23.nextInt();
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
+                        }
+                        if (maxKecepatan < data[i][j]) {
+                        maxKecepatan = data[i][j];
                         }
                         total[j] += data[i][j];
                         break;
@@ -48,22 +54,12 @@ public class ArrayDua23 {
                         if (min[j] > data[i][j]) {
                             min[j] = data[i][j];
                         }
+                        if (maxIndeksUV < data[i][j]) {
+                        maxIndeksUV = data[i][j];
+                        }
                         total[j] += data[i][j];
                         break;
                 }
-                
-                    if (maxSuhu < data[i][j]) {
-                        maxSuhu = data[i][j];
-                    }
-                    if (maxKelembapan < data[i][j]) {
-                        maxKelembapan = data[i][j];
-                    }
-                    if (maxKecepatan < data[i][j]) {
-                        maxKecepatan = data[i][j];
-                    }
-                    if (maxIndeksUV < data[i][j]) {
-                        maxIndeksUV = data[i][j];
-                    }
                 rata[j] = total[j] / data[0].length;
             }
         }
