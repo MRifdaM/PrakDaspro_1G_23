@@ -73,6 +73,7 @@ public class ArrayDua23 {
         System.out.println("---------------------");
         System.out.printf("Rata-rata suhu: %.2f\n", rata[0]);
         System.out.printf("Persentase kelembaban terendah: %s\n", min[1]);
+        System.out.println("Indeks UV tertinggi adalah " + maxIndeksUV);
         scan23.close(); 
     }
 }
