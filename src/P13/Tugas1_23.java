@@ -1,24 +1,38 @@
 package P13;
-
 import java.util.Scanner;
 
 public class Tugas1_23 {
-    
+
     public static void main(String[] args) {
-            int[][] nilaiMahasiswa = new int[5][7];
-            String[] namaMahasiswa = {"Sari", "Rina", "Yani", "Dwi", "Lusi"};
-            inputData(namaMahasiswa, nilaiMahasiswa);
-            tampilkanNilai(namaMahasiswa, nilaiMahasiswa);
-            int NilaiMTertinggi = mingguTertinggi(nilaiMahasiswa);
-            System.out.println("Minggu dengan nilai tertinggi adalah minggu ke-" + NilaiMTertinggi);
-            printTertinggi(namaMahasiswa, nilaiMahasiswa);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlahMahasiswa = sc.nextInt();
+        System.out.print("Masukkan jumlah minggu: ");
+        int jumlahMinggu = sc.nextInt();
+
+        int[][] nilaiMahasiswa = new int[jumlahMahasiswa][jumlahMinggu];
+        String[] namaMahasiswa = new String[jumlahMahasiswa];
+
+        for (int i = 0; i < jumlahMahasiswa; i++) {
+            System.out.print("Masukkan nama Mahasiswa ke-" + (i + 1) + ": ");
+            namaMahasiswa[i] = sc.next();
+        }
+
+        inputData(namaMahasiswa, nilaiMahasiswa);
+        tampilkanNilai(namaMahasiswa, nilaiMahasiswa);
+        int nilaiMTertinggi = mingguTertinggi(nilaiMahasiswa);
+        System.out.println("Minggu dengan nilai tertinggi adalah minggu ke-" + nilaiMTertinggi);
+        printTertinggi(namaMahasiswa, nilaiMahasiswa);
+
+        sc.close();
     }
 
     public static int[][] inputData(String nama[], int dataNilai[][]) {
         Scanner sc23 = new Scanner(System.in);
         for (int i = 0; i < nama.length; i++) {
             for (int j = 0; j < dataNilai[i].length; j++) {
-                System.out.print("Masukkan nilai Mahasiswa " + nama[i] + " pada minggu ke-"+ (j+1)+ " : " );
+                System.out.print("Masukkan nilai Mahasiswa " + nama[i] + " pada minggu ke-" + (j + 1) + " : ");
                 dataNilai[i][j] = sc23.nextInt();
             }
         }
@@ -67,3 +81,4 @@ public class Tugas1_23 {
                 + mingguTertinggi(nilaiData));
     }
 }
+
