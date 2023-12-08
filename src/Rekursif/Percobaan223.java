@@ -30,7 +30,6 @@ public class Percobaan223 {
         pangkat = sc23.nextInt();
         System.out.println(hitungPangkat(bilangan, pangkat));
 
-        // Memanggil fungsi untuk mencetak deret perhitungan pangkatnya
         cetakDeretPangkat(bilangan, pangkat);
     }
 }
