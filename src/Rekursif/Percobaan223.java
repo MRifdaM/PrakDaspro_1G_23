@@ -10,6 +10,17 @@ public class Percobaan223 {
         }
     }
 
+    static void cetakDeretPangkat(int x, int y) {
+        System.out.print("Deret perhitungan pangkat: ");
+        for (int i = 0; i < y; i++) {
+            System.out.print(x);
+            if (i < y - 1) {
+                System.out.print("x");
+            }
+        }
+        System.out.print(" = " + hitungPangkat(x, y));
+    }
+
     public static void main(String[] args) {
         Scanner sc23 = new Scanner(System.in);
         int bilangan, pangkat;
@@ -18,5 +29,8 @@ public class Percobaan223 {
         System.out.print("Pangkat : ");
         pangkat = sc23.nextInt();
         System.out.println(hitungPangkat(bilangan, pangkat));
+
+        // Memanggil fungsi untuk mencetak deret perhitungan pangkatnya
+        cetakDeretPangkat(bilangan, pangkat);
     }
 }
