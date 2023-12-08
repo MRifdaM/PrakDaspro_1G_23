@@ -21,13 +21,13 @@ public class Tugas1_23 {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc23 = new Scanner(System.in);
         System.out.print("Masukkan nilai N: ");
-        int n = sc.nextInt();
+        int n = sc23.nextInt();
         System.out.println("Deret rekursif: ");
         rekursif(n);
         System.out.println("Deret iteratif: ");
         iteratif(n);
-        sc.close();
+        sc23.close();
     }
 }

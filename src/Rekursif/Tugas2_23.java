@@ -12,10 +12,10 @@ public class Tugas2_23 {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc23 = new Scanner(System.in);
         System.out.print("Masukkan bilangan: ");
-        int n = sc.nextInt();
+        int n = sc23.nextInt();
         System.out.println(" = " + jumlahKan(n, 1));
-        sc.close();
+        sc23.close();
     }
 }
